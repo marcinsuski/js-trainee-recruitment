@@ -8,6 +8,7 @@ export type Data = {
   name: string,
   title: string,
   image: string,
+  highlight: string,
 }
 
 export function buildPath() {
@@ -15,7 +16,7 @@ export function buildPath() {
 }
 
 export function extractData(filePath: string) {
-    const fileData: Data = fs.readFileSync(filePath);
+    const fileData = fs.readFileSync(filePath);
     const data = JSON.parse(fileData);
     return data;
 }

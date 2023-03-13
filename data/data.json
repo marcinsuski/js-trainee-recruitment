@@ -1,44 +1,51 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "name": "POLAR BEAR",
         "title": "Say hello to your new friend",
-        "image": "/images/polarbear.jpeg"
+        "image": "/images/polarbear.jpeg",
+        "highlight": "friend"
     },
     {
-        "id": 2,
+        "id": "2",
         "name": "CHEETAH",
         "title": "No petting before eating",
-        "image": "/images/cheetah.jpeg"
+        "image": "/images/cheetah.jpeg",
+        "highlight": "eating"
     },
     {
-        "id": 3,
+        "id": "3",
         "name": "PANDA",
         "title": "Eating always with pleasure",
-        "image": "/images/panda.jpeg"
+        "image": "/images/panda.jpeg",
+        "highlight": "pleasure"
     },
     {
-        "id": 4,
+        "id": "4",
         "name": "FOX",
         "title": "Sometimes quite suspicious",
-        "image": "/images/fox.jpeg"
+        "image": "/images/fox.jpeg",
+        "highlight": "suspicious"
     },
     {
-        "id": 5,
+        "id": "5",
         "name": "SQUIRREL",
         "title": "Staying curious",
-        "image": "/images/squirrel.jpeg"
+        "image": "/images/squirrel.jpeg",
+        "highlight": "curious"
     },
     {
-        "id": 6,
+        "id": "6",
         "name": "BUTTERFLY",
         "title": "Majestic every time of a day",
-        "image": "/images/butterfly.jpeg"
+        "image": "/images/butterfly.jpeg",
+        "highlight": "Majestic"
     },
     {
-        "id": 7,
+        "id": "7",
         "name": "ELEPHANT",
         "title": "It makes a huge difference",
-        "image": "/images/elephant.jpeg"
+        "image": "/images/elephant.jpeg",
+        "highlight": "huge"
     }
 ]
