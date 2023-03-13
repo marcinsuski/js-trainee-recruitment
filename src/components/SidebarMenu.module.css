@@ -1,6 +1,8 @@
-/* .sidebarwrapper {
-
-} */
+.sidebarwrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 
 .sidebarwrapper h2 {
     font-size: 1.2rem;

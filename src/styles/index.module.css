@@ -22,6 +22,9 @@
 }
 
 .sidebarmenu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
     display: flex;
     flex-direction: column;
     flex-basis: 1;

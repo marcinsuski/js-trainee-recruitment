@@ -1,17 +1,18 @@
 import classes from "./Post.module.css";
 import Image from "next/image";
+import {Data} from "../pages/api/data";
 
-const Post = () => {
+const Post = ({ id, title, name, image }: Data) => {
     return (
         <div className={classes.card}>
-            <p>POLAR BEAR</p>
+            <p>{name}</p>
             <h2>
-                Say hello to your new{" "}
-                <span className={classes.highlight}>friend</span>
+               {title}
+                {/* <span className={classes.highlight}>friend</span> */}
             </h2>
             <Image
-                src="/images/polarbear.jpeg"
-                alt="polar bear"
+                src={image}
+                alt={name}
                 width={817}
                 height={431}
                 className={classes.image}

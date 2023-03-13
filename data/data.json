@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "POLAR BEAR",
+        "title": "Say hello to your new friend",
+        "image": "/images/polarbear.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "CHEETAH",
+        "title": "No petting before eating",
+        "image": "/images/cheetah.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "PANDA",
+        "title": "Eating always with pleasure",
+        "image": "/images/panda.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "FOX",
+        "title": "Sometimes quite suspicious",
+        "image": "/images/fox.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "SQUIRREL",
+        "title": "Staying curious",
+        "image": "/images/squirrel.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "BUTTERFLY",
+        "title": "Majestic every time of a day",
+        "image": "/images/butterfly.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "ELEPHANT",
+        "title": "It makes a huge difference",
+        "image": "/images/elephant.jpeg"
+    }
+]
