@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.card p {
+    color: hsla(240, 4%, 46%, 1);
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+
+.card h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
+    color: hsla(240, 6%, 10%, 1);
+}
+
+.highlight {
+    color: hsla(28, 87%, 62%, 1);
+}
+
+.image {
+    max-width: 100%;
+    width: 817px;
+    height: 431px;
+    object-fit: cover;
+}

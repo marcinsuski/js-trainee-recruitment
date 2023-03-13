@@ -1,9 +1,44 @@
 .wrapper {
-    margin: 15% auto;
-    max-width: 720px;
-    text-align: center;
+    /* max-width: 720px; */
+    background-color: var(--bg);
+    display: flex;
+    margin: 4rem auto;
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: clamp(1rem, 0.5rem + 4vw, 6.5rem);
+
+
 }
 
 .wrapper h1 {
     font-weight: 500;
+    font-size: clamp(1.5rem, 0.7rem + 3vw, 2.5rem);
+    margin: 0.5rem 0;
+}
+
+.wrapper p {
+    font-weight: 500;
+    font-size: clamp(0.5rem, 0.2rem + 3vw, 1rem);
+}
+
+.sidebarmenu {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    width: 318px;
+    height: 500px;
+    background-color: white;
+}
+
+.sidebarmenu ul {
+    text-align: left;
+}
+
+.sidebarmenu li {
+    list-style: none;
+}
+
+.content {
+    flex-basis: 2;
+    margin: 0 1rem;
 }
