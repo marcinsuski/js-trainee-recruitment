@@ -11,16 +11,19 @@ export type Data = {
   highlight: string,
 }
 
+// build path to API - could go without it here, but useful with larger apps.
 export function buildPath() {
     return path.join(process.cwd(), "data", "data.json");
 }
 
+// extract data from filepath to API.
 export function extractData(filePath: string) {
-    const fileData = fs.readFileSync(filePath);
+    const fileData = fs.readFileSync(filePath, 'utf8');
     const data = JSON.parse(fileData);
     return data;
 }
 
+// handle response from API
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>

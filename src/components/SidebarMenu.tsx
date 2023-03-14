@@ -8,27 +8,29 @@ import React, {
 import classes from "./SidebarMenu.module.css";
 
 const SidebarMenu = ({ activeLink, setActiveLink }: ActiveLink) => {
+    
+    // eventlistener on parent in order to handle event delegation and set smooth scrolling to specific sections on the page.
     const clickHandler = (e: React.SyntheticEvent) => {
         e.preventDefault();
-        let sectionId = e.target.hash.replace(/#/, "");
-        let element = document.getElementById(sectionId);
+        const target = e.target as HTMLAnchorElement;
+        const sectionId = target.hash.replace(/#/, "");
+        const element = document.getElementById(sectionId);
         element?.scrollIntoView({
             behavior: "smooth",
             block: "start",
         });
-        setActiveLink(e.target.hash);
     };
 
     return (
         <div className={classes.sidebarwrapper}>
-            <h2>Your new gag</h2>
+            <h2>Your new gang</h2>
             <ul onClick={clickHandler}>
                 <li>
                     <a
                         href="#1"
                         className={`${
-                            activeLink == "#1" ? classes.active : ""
-                        } }`}
+                            activeLink === "1" ? classes.active : ""
+                        }`}
                     >
                         Polar Bear
                     </a>
@@ -37,8 +39,8 @@ const SidebarMenu = ({ activeLink, setActiveLink }: ActiveLink) => {
                     <a
                         href="#2"
                         className={`${
-                            activeLink == "#2" ? classes.active : ""
-                        } }`}
+                            activeLink === "2" ? classes.active : ""
+                        }`}
                     >
                         Panda
                     </a>
@@ -47,8 +49,8 @@ const SidebarMenu = ({ activeLink, setActiveLink }: ActiveLink) => {
                     <a
                         href="#3"
                         className={`${
-                            activeLink == "#3" ? classes.active : ""
-                        } }`}
+                            activeLink === "3" ? classes.active : ""
+                        }`}
                     >
                         Fox
                     </a>
@@ -57,8 +59,8 @@ const SidebarMenu = ({ activeLink, setActiveLink }: ActiveLink) => {
                     <a
                         href="#4"
                         className={`${
-                            activeLink == "#4" ? classes.active : ""
-                        } }`}
+                            activeLink === "4" ? classes.active : ""
+                        }`}
                     >
                         Squirrel
                     </a>
@@ -67,8 +69,8 @@ const SidebarMenu = ({ activeLink, setActiveLink }: ActiveLink) => {
                     <a
                         href="#5"
                         className={`${
-                            activeLink == "#5" ? classes.active : ""
-                        } }`}
+                            activeLink === "5" ? classes.active : ""
+                        }`}
                     >
                         Butterfly
                     </a>
@@ -77,8 +79,8 @@ const SidebarMenu = ({ activeLink, setActiveLink }: ActiveLink) => {
                     <a
                         href="#6"
                         className={`${
-                            activeLink == "#6" ? classes.active : ""
-                        } }`}
+                            activeLink === "6" ? classes.active : ""
+                        }`}
                     >
                         Elephant
                     </a>

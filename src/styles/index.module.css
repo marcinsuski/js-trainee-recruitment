@@ -1,13 +1,9 @@
 .wrapper {
-    /* max-width: 720px; */
     background-color: var(--bg);
     display: flex;
     margin: 4rem auto;
     justify-content: center;
-    /* align-items: flex-start; */
     gap: clamp(1rem, 0.5rem + 4vw, 6.5rem);
-
-
 }
 
 .wrapper h1 {

@@ -1,20 +1,31 @@
 import classes from "./Post.module.css";
 import Image from "next/image";
 import { Data } from "../pages/api/data";
-import { MutableRefObject, useEffect, useState } from "react";
-import useOnScreen from "../../utils/useOnScreen";
 
-const Post = (
-    { id, title, name, image, highlight }: Data,
-    { setActiveLink }
-) => {
-    const [ref, visible] = useOnScreen({ rootMargin: "-300px" });
- 
+const Post = ({ id, title, name, image, highlight }: Data) => {
+    
+    //Loop through the title to find the specific word that should be highlighted and if that's the case, returns a word with additional className.
+    const higlightHandler = () => {
+        const words = title.split(" ");
+        return (
+          <h2>
+            {words.map((word, i) => {
+              if (word === highlight) {
+                return <span key={i} className={classes.highlight}>{word} </span>;
+              } else {
+                return <span key={i}>{word} </span>;
+              }
+            })}
+          </h2>
+        );
+    };
+
+    const newTitle = higlightHandler()
+
     return (
-        <div className={classes.card} id={`${id}`}>
+        <div className={`card ${classes.card}`} id={`${id}`}>
             <p>{name}</p>
-            <h2>title</h2>
-            {visible ? setActiveLink(id) : null}
+           {newTitle}
             <Image
                 src={image}
                 alt={name}
