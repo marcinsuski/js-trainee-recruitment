@@ -18,26 +18,30 @@ export default function Home() {
     //handle srolling in order to keep the active Post in State and allow sidebar to track the changes.
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 200;
-            const posts = document.querySelectorAll(".card");
+            const scrollPosition: number = window.scrollY + 200;
+            const posts: NodeListOf<HTMLElement> | null =
+                document.querySelectorAll(".card");
+
             //guard clause
             if (posts !== null) {
                 setActiveLink("");
             }
-            const currentPost = Array.from(posts).find(
-                ({ offsetTop, offsetHeight }: any) =>
-                    scrollPosition >= offsetTop &&
-                    scrollPosition < offsetTop + offsetHeight
-            ) as HTMLElement; //type assertion
 
-            if (currentPost) setActiveLink(currentPost.id);
+            const currentPost: HTMLElement | undefined = Array.from(posts).find(
+                (post: HTMLElement) =>
+                    scrollPosition >= post.offsetTop &&
+                    scrollPosition < post.offsetTop + post.offsetHeight
+            );
+
+            if (currentPost instanceof HTMLElement) {
+                setActiveLink(currentPost.id);
+            }
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [activeLink]);
+    }, []);
 
     //Fetch data from data.json
     useEffect(() => {
@@ -52,7 +56,6 @@ export default function Home() {
 
     return (
         <>
-        
             <div className={classes.wrapper}>
                 <div className={classes.sidebarmenu}>
                     <SidebarMenu

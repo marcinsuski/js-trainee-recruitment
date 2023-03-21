@@ -13,6 +13,7 @@
 .sidebarwrapper a {
     height: 2.813rem;
     padding: 0 4rem;
+    color: hsla(240, 4%, 46%, 1);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -26,8 +27,8 @@
     font-weight: 500;
 }
 
-.active,
-.active a {
+.sidebarwrapper .active,
+.sidebarwrapper .active a {
     background-color: #fafafa;
     color: hsla(25, 95%, 53%, 1);
     font-weight: 500;

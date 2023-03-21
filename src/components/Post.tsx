@@ -5,7 +5,7 @@ import { Data } from "../pages/api/data";
 const Post = ({ id, title, name, image, highlight }: Data) => {
     
     //Loop through the title to find the specific word that should be highlighted and if that's the case, returns a word with additional className.
-    const higlightHandler = () => {
+    const highlightHandler = () => {
         const words = title.split(" ");
         return (
           <h2>
@@ -20,7 +20,7 @@ const Post = ({ id, title, name, image, highlight }: Data) => {
         );
     };
 
-    const newTitle = higlightHandler()
+    const newTitle = highlightHandler()
 
     return (
         <div className={`card ${classes.card}`} id={`${id}`}>
